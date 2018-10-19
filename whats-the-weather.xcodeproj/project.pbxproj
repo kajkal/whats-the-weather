@@ -17,6 +17,8 @@
 		47419D0B217A810E00045B25 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419D0A217A810E00045B25 /* Weather.swift */; };
 		47419D0D217A812400045B25 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419D0C217A812400045B25 /* DataFetcher.swift */; };
 		47419D0F217A813000045B25 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419D0E217A813000045B25 /* Formatter.swift */; };
+		47419D11217A837B00045B25 /* LocationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419D10217A837B00045B25 /* LocationTableCell.swift */; };
+		47419D15217A859100045B25 /* CacheData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419D14217A859100045B25 /* CacheData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		47419D0A217A810E00045B25 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		47419D0C217A812400045B25 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		47419D0E217A813000045B25 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		47419D10217A837B00045B25 /* LocationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableCell.swift; sourceTree = "<group>"; };
+		47419D14217A859100045B25 /* CacheData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			children = (
 				47419D0C217A812400045B25 /* DataFetcher.swift */,
 				47419D0E217A813000045B25 /* Formatter.swift */,
+				47419D14217A859100045B25 /* CacheData.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				47419CF0217A745600045B25 /* MasterViewController.swift */,
+				47419D10217A837B00045B25 /* LocationTableCell.swift */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -201,8 +207,10 @@
 				47419CF3217A745600045B25 /* DetailViewController.swift in Sources */,
 				47419CF1217A745600045B25 /* MasterViewController.swift in Sources */,
 				47419D09217A80F700045B25 /* Location.swift in Sources */,
+				47419D11217A837B00045B25 /* LocationTableCell.swift in Sources */,
 				47419D0F217A813000045B25 /* Formatter.swift in Sources */,
 				47419D0D217A812400045B25 /* DataFetcher.swift in Sources */,
+				47419D15217A859100045B25 /* CacheData.swift in Sources */,
 				47419CEF217A745600045B25 /* AppDelegate.swift in Sources */,
 				47419D0B217A810E00045B25 /* Weather.swift in Sources */,
 			);
