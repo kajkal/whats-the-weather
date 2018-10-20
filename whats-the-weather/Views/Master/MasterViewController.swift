@@ -15,11 +15,8 @@ class MasterViewController: UITableViewController {
     
     func refresh() -> Void {
         print("reload view")
-        //let indexPaths =
-        
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            //  self.tableView.r
         }
     }
     
@@ -54,15 +51,16 @@ class MasterViewController: UITableViewController {
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if segue.identifier == "showDetail" {
-        //            if let indexPath = tableView.indexPathForSelectedRow {
-        //                let object = objects[indexPath.row] as! NSDate
-        //                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-        //                controller.detailItem = object
-        //                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-        //                controller.navigationItem.leftItemsSupplementBackButton = true
-        //            }
-        //        }
+        if segue.identifier == "id_segue_showDetail" {
+            print("display detail")
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let object = objects[indexPath.row] as! NSDate
+//                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+//                controller.detailItem = object
+//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                controller.navigationItem.leftItemsSupplementBackButton = true
+//            }
+        }
     }
     
     // MARK: - Table View
@@ -78,7 +76,7 @@ class MasterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ID_LocationCell", for: indexPath) as! LocationTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "id_cell_locationCell", for: indexPath) as! LocationTableCell
         let object = cacheData.getData(index: indexPath.row)
         print("print table cell; index: \(indexPath.row); location: \(object.name)")
         
