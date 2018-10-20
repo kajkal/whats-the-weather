@@ -13,6 +13,7 @@ struct Weather: Codable {
         let date: Date
         let weatherStateName: String
         let weatherStateImg: String
+        let temp: Double
         let tempMin: Double
         let tempMax: Double
         let windSpeed: Double
@@ -24,6 +25,7 @@ struct Weather: Codable {
             case date = "applicable_date"
             case weatherStateName = "weather_state_name"
             case weatherStateImg = "weather_state_abbr"
+            case temp = "the_temp"
             case tempMin = "min_temp"
             case tempMax = "max_temp"
             case windSpeed = "wind_speed"

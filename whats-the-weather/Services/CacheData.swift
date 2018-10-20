@@ -9,10 +9,11 @@
 import UIKit
 
 // singleton with cache data fetched from remote services
-class CacheData {
+final class CacheData {
     private static let instance: CacheData = CacheData()
     private let weatherIcons: [String: UIImage]
     private var data: [Int: Weather]
+    private var refreshFunction: () -> Void
     
     private init() {
         weatherIcons = {
@@ -23,6 +24,8 @@ class CacheData {
             }
             return icons
         }()
+        
+        refreshFunction = {() -> Void in print("im not initialized: refreshFunction")}
         
         data = [Int: Weather]()
         addWeather(woeid: 523920) // Warsaw
@@ -37,6 +40,7 @@ class CacheData {
         
         if weather.days.count > 0 {
             data[weather.woeid] = weather
+            refreshFunction()
         } else {
             print("Error: incomplete data!")
         }
@@ -46,11 +50,44 @@ class CacheData {
         return CacheData.instance
     }
     
+    
+    func setRefreshFunction(refreshFunction: @escaping () -> Void) -> Void {
+        self.refreshFunction = refreshFunction
+    }
+    
+    // weather icons
+    func getWeatherIcon(iconName: String) -> UIImage {
+        return weatherIcons[iconName]!
+    }
+    
+    // weather: get
+    func getData() -> [Weather] {
+        return Array(data.values)
+    }
+    
+    func getDataCount() -> Int {
+        return data.count
+    }
+    
+    func getData(index: Int) -> Weather {
+        return getData()[index]
+    }
+    
+    func getData(woeid: Int) -> Weather {
+        return data[woeid]!
+    }
+    
+    // weather: add
     func addWeather(woeid: Int) -> Void {
         DataFetcher.fetchWeatherData(woeid: woeid, completion: weatherFetched)
     }
     
-    func getData() -> [Weather] {
-        return Array(data.values)
+    // weather: remove
+    func removeWeather(index: Int) -> Void {
+        removeWeather(woeid: getData()[index].woeid)
+    }
+    
+    func removeWeather(woeid: Int) -> Void {
+        data.removeValue(forKey: woeid)
     }
 }

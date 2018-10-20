@@ -7,3 +7,13 @@
 //
 
 import UIKit
+
+class LocationTableCell: UITableViewCell {
+    
+    @IBOutlet weak var weatherStateIconImg: UIImageView!
+    @IBOutlet weak var locationNameLbl: UILabel!
+    @IBOutlet weak var tempCurrentLbl: UILabel!
+    
+    var woeid: Int = -1
+    
+}
