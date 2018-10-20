@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
     private var selectedDay: Int?
     
     func setWeather(weather: Weather) -> Void {
-        print("setWeather")
         if weather.days.count > 0 {
             self.weather = weather
             self.availableRange = 0...(weather.days.count - 1)
@@ -49,7 +48,6 @@ class DetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        print("viewDidLoad")
         super.viewDidLoad()
     }
     

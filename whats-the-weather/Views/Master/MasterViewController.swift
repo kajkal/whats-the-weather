@@ -14,14 +14,12 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     
     func refresh() -> Void {
-        print("reload view")
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
-        print("master init")
         cacheData.setRefreshFunction(refreshFunction: refresh)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

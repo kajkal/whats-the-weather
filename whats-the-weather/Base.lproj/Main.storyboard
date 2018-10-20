@@ -304,7 +304,9 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Karol Leśniak" id="Zdf-7t-Un8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="BW0-MC-411"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -427,6 +429,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Cmh-T0-FuX"/>
         <segue reference="6S0-TO-JiA"/>
         <segue reference="BEg-xt-0Sm"/>
     </inferredMetricsTieBreakers>

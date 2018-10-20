@@ -36,7 +36,7 @@ class SearchLocationViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = searchResults[indexPath.row]
         
-        print("wybrano: \(object.name), woeid: \(object.woeid)")
+        print("select: \(object.name), woeid: \(object.woeid)")
         CacheData.getInstance().addWeather(woeid: object.woeid)
         
 //        self.navigationController?.popToRootViewController(animated: true)
