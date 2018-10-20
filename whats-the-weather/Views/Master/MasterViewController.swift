@@ -42,10 +42,8 @@ class MasterViewController: UITableViewController {
     
     @objc
     func insertNewObject(_ sender: Any) {
-        //        CacheData.getInstance().getData().insert(NSDate(), at: 0)
-        //        let indexPath = IndexPath(row: 0, section: 0)
-        //        tableView.insertRows(at: [indexPath], with: .automatic)
-        print("add new element clicked")
+        performSegue(withIdentifier: "id_segue_addLocation", sender: self)
+        
     }
     
     // MARK: - Segues
