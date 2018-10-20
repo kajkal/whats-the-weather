@@ -42,7 +42,7 @@ class MasterViewController: UITableViewController {
     
     @objc
     func insertNewObject(_ sender: Any) {
-        performSegue(withIdentifier: "id_segue_addLocation", sender: self)
+        performSegue(withIdentifier: "id_segue_searchLocation", sender: self)
         
     }
     

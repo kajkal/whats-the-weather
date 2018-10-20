@@ -11,6 +11,7 @@ import UIKit
 // singleton with cache data fetched from remote services
 final class CacheData {
     private static let instance: CacheData = CacheData()
+    
     private let weatherIcons: [String: UIImage]
     private var data: [Int: Weather]
     private var refreshFunction: () -> Void
@@ -25,7 +26,7 @@ final class CacheData {
             return icons
         }()
         
-        refreshFunction = {() -> Void in print("im not initialized: refreshFunction")}
+        refreshFunction = {() -> Void in print("CacheData.refreshFunction: im not initialized jet!")}
         
         data = [Int: Weather]()
         addWeather(woeid: 523920) // Warsaw
@@ -46,11 +47,12 @@ final class CacheData {
         }
     }
     
+    // singleton -> get instance
     static func getInstance() -> CacheData {
         return CacheData.instance
     }
     
-    
+    // set action to perform after data is changed
     func setRefreshFunction(refreshFunction: @escaping () -> Void) -> Void {
         self.refreshFunction = refreshFunction
     }
