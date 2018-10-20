@@ -73,20 +73,17 @@ class DetailViewController: UIViewController {
                 self.backBtn.isEnabled = (1...(self.availableRange!.upperBound)).contains(self.selectedDay!)
                 self.nextBtn.isEnabled = (0..<(self.availableRange!.upperBound)).contains(self.selectedDay!)
                 
-                print("data for day \(Formatter.getDateToDisplay(date: data.date)) displayed")
+                print("Detail for '\(self.weather!.name)': data for day \(Formatter.getDateToDisplay(date: data.date)) displayed")
             }
         }
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
-        print("back button clicked!")
         self.selectedDay = self.selectedDay! - 1
         self.updateViewForSelectedDay()
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        
-        print("next button clicked!")
         self.selectedDay = self.selectedDay! + 1
         self.updateViewForSelectedDay()
     }
