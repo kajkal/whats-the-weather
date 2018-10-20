@@ -165,11 +165,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="62.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Back"/>
+                                                        <connections>
+                                                            <action selector="backBtnClicked:" destination="JEX-9P-axG" eventType="touchUpInside" id="kzf-fN-FgV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTA-mi-3JF">
                                                         <rect key="frame" x="167.5" y="0.0" width="167.5" height="62.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Next"/>
+                                                        <connections>
+                                                            <action selector="nextBtnClicked:" destination="JEX-9P-axG" eventType="touchUpInside" id="Bqq-Zr-uoq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
