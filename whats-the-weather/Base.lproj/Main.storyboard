@@ -36,17 +36,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="orK-Y3-ZUJ">
                                 <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-Jl-24i">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-Jl-24i">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="56.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZo-0Y-CpT">
-                                                <rect key="frame" x="20" y="8" width="168.5" height="40.5"/>
+                                                <rect key="frame" x="20" y="8" width="147.5" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtC-gD-mUu">
-                                                <rect key="frame" x="188.5" y="8" width="126.5" height="40.5"/>
+                                                <rect key="frame" x="167.5" y="8" width="147.5" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -194,7 +194,18 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="locationNameLbl" destination="mOI-FS-AaM" id="6NG-Bi-DVh"/>
+                        <outlet property="airPressureLbl" destination="5qa-9A-dwC" id="ptq-5x-WW6"/>
+                        <outlet property="backBtn" destination="W98-D8-mii" id="SyZ-b0-CDL"/>
+                        <outlet property="dateDayNameLbl" destination="RtC-gD-mUu" id="JPr-qD-DGT"/>
+                        <outlet property="dateFullLbl" destination="qZo-0Y-CpT" id="tP4-Mm-icm"/>
+                        <outlet property="humidityLbl" destination="JY5-GV-o5x" id="lZh-mP-Axd"/>
+                        <outlet property="locationNameNavItem" destination="mOI-FS-AaM" id="EAU-0d-E1i"/>
+                        <outlet property="nextBtn" destination="iTA-mi-3JF" id="xAw-EE-0f1"/>
+                        <outlet property="tempMaxLbl" destination="npB-vf-l0n" id="bnx-bV-HTJ"/>
+                        <outlet property="tempMinLbl" destination="bO4-SR-Ag4" id="N9e-gp-GqH"/>
+                        <outlet property="weatherStateIconImg" destination="Vl7-ws-QPE" id="aL3-zd-43z"/>
+                        <outlet property="windDirectionLbl" destination="eVJ-Mr-gVS" id="v8h-uT-3kL"/>
+                        <outlet property="windSpeedLbl" destination="CoU-uF-bmC" id="E6h-lM-wu4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
