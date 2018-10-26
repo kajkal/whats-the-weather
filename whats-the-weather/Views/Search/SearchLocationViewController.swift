@@ -123,7 +123,7 @@ class SearchLocationViewController: UIViewController, UITableViewDataSource, UIT
         let coords: CLLocationCoordinate2D = (self.currentPlacemark?.location?.coordinate)!
         let lattlong: String = [coords.latitude, coords.longitude].map{return "\($0)"}.joined(separator: ",")
         print("'\(lattlong)'")
-//        DataFetcher.fetchLocationData(city: locationName, completion: searchResultFetched)
+        DataFetcher.fetchLocationData(lattlong: lattlong, completion: searchResultFetched)
     }
 }
 
@@ -131,7 +131,7 @@ extension SearchLocationViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        print("Location updated: \(location)")
+        print("Location updated:  {lat=\(location.coordinate.latitude), lon= \(location.coordinate.longitude)")
         
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location, completionHandler: {

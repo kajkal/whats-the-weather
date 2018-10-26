@@ -35,6 +35,29 @@ class DataFetcher {
         task.resume()
     }
     
+    static func fetchLocationData(lattlong: String, completion: @escaping ([Location]) -> Void) {
+        guard let url = URL(string: "search/?lattlong=\(lattlong)", relativeTo: baseURL) else {return}
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "Response error")
+            }
+            
+            guard let dataResponse = data else {return}
+            do {
+                let decoder = JSONDecoder()
+                let jsonResponse = try decoder.decode([Location].self, from: dataResponse)
+                
+                print("fetchLocationData received: \(jsonResponse.count)")
+                
+                completion(jsonResponse)
+            } catch let parsingError {
+                print(parsingError.localizedDescription)
+            }
+        }
+        task.resume()
+    }
+    
     static func fetchWeatherData(woeid: Int, completion: @escaping (Weather) -> Void) {
         guard let url = URL(string: String(woeid), relativeTo: baseURL) else {return}
         
