@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47116B8721839B2600E98F36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47116B8621839B2600E98F36 /* MapViewController.swift */; };
 		47419CEF217A745600045B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419CEE217A745600045B25 /* AppDelegate.swift */; };
 		47419CF1217A745600045B25 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419CF0217A745600045B25 /* MasterViewController.swift */; };
 		47419CF3217A745600045B25 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47419CF2217A745600045B25 /* DetailViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47116B8621839B2600E98F36 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		47419CEB217A745600045B25 /* whats-the-weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whats-the-weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47419CEE217A745600045B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47419CF0217A745600045B25 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47116B8521839B0E00E98F36 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				47116B8621839B2600E98F36 /* MapViewController.swift */,
+			);
+			name = Map;
+			path = "whats-the-weather/Views/Map";
+			sourceTree = SOURCE_ROOT;
+		};
 		47333F66217BADA300BFDDA1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +126,7 @@
 		47419D04217A7FE300045B25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47116B8521839B0E00E98F36 /* Map */,
 				47333F66217BADA300BFDDA1 /* Search */,
 				47419D06217A801D00045B25 /* Detail */,
 				47419D05217A800300045B25 /* Master */,
@@ -217,6 +229,7 @@
 				47419D0F217A813000045B25 /* Formatter.swift in Sources */,
 				47419D0D217A812400045B25 /* DataFetcher.swift in Sources */,
 				47419D15217A859100045B25 /* CacheData.swift in Sources */,
+				47116B8721839B2600E98F36 /* MapViewController.swift in Sources */,
 				47D59E61217B7B3800271EB2 /* SearchLocationViewController.swift in Sources */,
 				47D59E63217B841600271EB2 /* SearchResultTableCell.swift in Sources */,
 				47419CEF217A745600045B25 /* AppDelegate.swift in Sources */,

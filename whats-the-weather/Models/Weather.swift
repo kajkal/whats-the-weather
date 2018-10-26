@@ -38,10 +38,12 @@ struct Weather: Codable {
     let woeid: Int
     let name: String
     let days: [Day]
+    let lattlong: String
     
     enum CodingKeys: String, CodingKey {
         case days = "consolidated_weather"
         case name = "title"
         case woeid
+        case lattlong = "latt_long"
     }
 }
