@@ -78,18 +78,6 @@ class DetailViewController: UIViewController {
         }
     }
     
-    // prepare segue to display new view with map
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "id_segue_showMap" {
-            print("przygotowania do odpalania")
-            
-            let lattlong = (self.weather?.lattlong)!
-            let controller = segue.destination as! MapViewController
-            
-            controller.setData(lattlong: lattlong, locationName: (self.weather?.name)!)
-        }
-    }
-    
     @IBAction func backBtnClicked(_ sender: UIButton) {
         self.selectedDay = self.selectedDay! - 1
         self.updateViewForSelectedDay()
@@ -98,6 +86,16 @@ class DetailViewController: UIViewController {
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         self.selectedDay = self.selectedDay! + 1
         self.updateViewForSelectedDay()
+    }
+    
+    // prepare segue to display new view with map
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "id_segue_showMap" {
+            let lattlong = (self.weather?.lattlong)!
+            let controller = segue.destination as! MapViewController
+            
+            controller.setData(lattlong: lattlong, locationName: (self.weather?.name)!)
+        }
     }
 }
 

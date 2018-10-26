@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
         let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.coordinate[0], longitude: self.coordinate[1])
         let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
         

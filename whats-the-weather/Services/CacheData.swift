@@ -17,14 +17,9 @@ final class CacheData {
     private var refreshFunction: () -> Void
     
     private init() {
-        weatherIcons = {
-            let iconNames: [String] = ["c", "h", "hc", "hr", "lc", "lr", "s", "sl", "sn", "t"]
-            var icons = [String: UIImage]()
-            for iconName in iconNames {
-                icons[iconName] = UIImage(named: iconName)
-            }
-            return icons
-        }()
+        weatherIcons = Dictionary(uniqueKeysWithValues:
+            ["c", "h", "hc", "hr", "lc", "lr", "s", "sl", "sn", "t"].map{($0, UIImage(named: $0)!)}
+        )
         
         refreshFunction = {() -> Void in print("CacheData.refreshFunction: im not initialized jet!")}
         
